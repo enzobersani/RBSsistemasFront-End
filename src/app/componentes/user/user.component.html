@@ -1,0 +1,41 @@
+<po-page-default p-title="Cadastro de Usuários">
+    <br>
+    <div class="container">
+        <po-button
+            p-label="Cadastrar Usuário"
+            (p-click)="modal.open()"
+        ></po-button>
+        <po-input id="inputFiltro"
+            style="display: flex; justify-content: flex-end;" class="po-md-2" p-placeholder="Filtrar por código"
+        ></po-input>
+        <po-button
+            p-icon="po-icon po-icon-search"
+        ></po-button>
+    </div>
+    <po-divider></po-divider>
+    <po-container class="po-lg-12">
+        <div class="po-table">
+            <po-table
+                [p-columns]="columns"
+                [p-items]="items"
+            ></po-table>
+        </div>
+    </po-container>
+
+    <po-modal #modal p-title="Cadastro de Usuário">
+        <po-input #nome p-label="Informe o nome:"></po-input>
+        <br>
+        <po-input #email p-label="Informe o Email:"></po-input>
+        <po-modal-footer>
+            <po-button
+                p-label="Fechar"
+                (p-click)="modal.close()"
+            ></po-button>
+            <po-button
+                p-label="Salvar"
+                (p-click)="enviarDados(); modal.close()"
+            ></po-button>
+        </po-modal-footer>
+    </po-modal>
+
+</po-page-default>

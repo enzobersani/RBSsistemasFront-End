@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container input{
+    margin-right: 400px;
+}
+
+#inputFiltro{
+    text-align: right;
+}
